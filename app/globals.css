@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.main-header {
+  width: 100%;
+  padding: 20px;
+  background-color: #78a9ed;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  margin-right: 15px;
+  width: 15px;
+}
+
+.main-body {
+  display: flex;
+}
+
+.main-navbar {
+  flex: 0 0 200px;
+  background-color: rgb(205, 205, 205);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-navbar a {
+  padding: 20px;
+  text-decoration: none;
+  color: grey;
+  margin-right: 10px;
+  display: flex;
+  align-items: center; 
+}
+
+.navbar-icon {
+  width: 20px;
+  margin-right: 15px;
+}
