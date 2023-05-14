@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
               <span>Board</span>
             </Link>
           </div>
-          <div>{children}</div>
+          <div className="main-page">{children}</div>
         </div>
       </body>
     </html>

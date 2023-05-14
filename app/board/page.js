@@ -1,5 +1,14 @@
-export default function Board(){
+import { connectDB } from "@/util/database";
+import List from "./List";
+
+export default async function Board() {
+  const db = (await connectDB).db("my-board");
+  const result = await db.collection("post").find().toArray();
   return (
-    <div>board</div>
-  )
+    <div className="list-bg">
+      {result.map((a, i) => {
+        return <List data={a} key={i} />;
+      })}
+    </div>
+  );
 }
