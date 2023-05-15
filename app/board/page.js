@@ -7,7 +7,7 @@ export default async function Board() {
   return (
     <div className="list-bg">
       {result.map((a, i) => {
-        return <List data={a} key={i} />;
+        return <List a={a} key={i} />;
       })}
     </div>
   );

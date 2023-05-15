@@ -3,6 +3,11 @@ body {
   overflow: hidden;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .main-header {
   width: 100%;
   padding: 20px;
@@ -31,7 +36,6 @@ body {
 
 .main-navbar a {
   padding: 20px;
-  text-decoration: none;
   color: grey;
   margin-right: 10px;
   display: flex;
@@ -80,4 +84,21 @@ body {
   margin-right: 20px;
   text-align: right;
   color: #aaaaaa;
+}
+
+.detail-page {
+  width: 90%;
+  height: 80%;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+}
+
+.x-icon {
+  width: 20px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }
