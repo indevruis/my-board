@@ -6,6 +6,7 @@ import {
   faBars,
   faHouse,
   faPenToSquare,
+  faPen
 } from "@fortawesome/free-solid-svg-icons";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -32,6 +33,10 @@ export default function RootLayout({ children }) {
             <Link href="/board">
               <FontAwesomeIcon icon={faPenToSquare} className="navbar-icon" />
               <span>Board</span>
+            </Link>
+            <Link href="/board/write">
+            <FontAwesomeIcon icon={faPen} className="navbar-icon"/>
+              <span>Write(임시)</span>
             </Link>
           </div>
           <div className="main-page">{children}</div>
