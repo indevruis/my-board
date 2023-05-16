@@ -7,11 +7,14 @@ export default async function List({ a }) {
       <div className="list-item-left">
         <Link href={`board/Detail/${data._id}`}>
           <h4>{data.title}</h4>
+          <p className="list-date">{data.date}</p>
         </Link>
         <p>{data.writer}</p>
       </div>
       <div className="list-item-right">
-        <p>{data.date}</p>
+        <Link href={`board/edit/${data._id}`}>
+          <span>✏️</span>
+        </Link>
       </div>
     </div>
   );

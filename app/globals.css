@@ -79,6 +79,17 @@ a {
   margin-left: 30px;
 }
 
+.list-date {
+  color: #aaaaaa;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.list-item-left a {
+  display: flex;
+  align-items: center;
+}
+
 .list-item-right {
   width: 30%;
   margin-right: 20px;
