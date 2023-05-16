@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  overflow: hidden;
 }
 
 a {
@@ -10,7 +9,8 @@ a {
 
 .main-header {
   width: 100%;
-  padding: 20px;
+  height: 40px;
+  padding: 10px;
   background-color: #78a9ed;
   color: white;
   display: flex;
@@ -29,7 +29,7 @@ a {
 
 .main-navbar {
   flex: 0 0 200px;
-  height: 100vh;
+  height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
 }
@@ -39,7 +39,7 @@ a {
   color: grey;
   margin-right: 10px;
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
 .navbar-icon {
@@ -49,7 +49,7 @@ a {
 
 .main-page {
   width: 100%;
-  background-color:#dcdcdc;
+  background-color: #dcdcdc;
 }
 
 .home-bg {
@@ -101,4 +101,52 @@ a {
   position: absolute;
   top: 30px;
   right: 30px;
+}
+
+.write-page {
+  width: 90%;
+  height: 90%;
+  margin: 30px auto;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+}
+
+.write-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.write-input {
+  width: 250px;
+  margin: 5px 0 10px 0;
+}
+
+.write-div {
+  width: 300px;
+  margin: 0 auto;
+}
+
+input {
+  padding: 10px;
+}
+
+button {
+  width: 90px;
+  height: 40px;
+  margin: 10px 10px 0 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+button[type="submit"] {
+  background-color: #78a9ed;
+  color: white;
+}
+
+.write-btn {
+  width: 250px;
+  margin: 0 auto;
 }
