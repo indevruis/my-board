@@ -9,22 +9,19 @@ export default async function handler(req, res) {
   };
   if (req.method == "POST") {
     if (req.body.title === "" || req.body.writer === "") {
-      return res.status(500).json("제목을 작성하세요.");
+      res.status(500).json("제목을 작성하세요.");
     }
     try {
       const db = (await connectDB).db("my-board");
-      const result = await db
-        .collection("post")
-        .insertOne({
-          title: req.body.title,
-          content: req.body.content,
-          writer: req.body.writer,
-          date: `${today.year}/${today.month}/${today.day}`,
-        });
-        console.log(result)
-      return res.redirect(302, "/board");
+      const result = await db.collection("post").insertOne({
+        title: req.body.title,
+        content: req.body.content,
+        writer: req.body.writer,
+        date: `${today.year}/${today.month}/${today.day}`,
+      });
+      res.redirect(302, "/board");
     } catch (error) {
-      return res.status(500).json("실패");
+      res.status(500).json("실패");
     }
   }
 }
