@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DeleteBtn from './component/deleteBtn'
 
 export default async function List({ a }) {
   const data = await JSON.parse(JSON.stringify(await a));
@@ -13,8 +14,9 @@ export default async function List({ a }) {
       </div>
       <div className="list-item-right">
         <Link href={`board/edit/${data._id}`}>
-          <span>✏️</span>
+          <span className="list-btn">✏️</span>
         </Link>
+        <DeleteBtn data={data}/>
       </div>
     </div>
   );

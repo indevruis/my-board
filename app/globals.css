@@ -97,6 +97,12 @@ a {
   color: #aaaaaa;
 }
 
+.list-btn {
+  font-size: 20px;
+  margin-left: 10px;
+  padding: 5px;
+}
+
 .detail-page {
   width: 90%;
   height: 80%;
