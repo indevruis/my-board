@@ -15,6 +15,11 @@ a {
   color: white;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin-right: auto;
 }
 
 .menu-icon {
@@ -166,4 +171,17 @@ button[type="submit"] {
 .write-btn {
   width: 250px;
   margin: 0 auto;
+}
+
+.loginBtn {
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.login {
+  margin-right: 10px;
 }
