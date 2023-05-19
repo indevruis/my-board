@@ -142,7 +142,8 @@ a {
 }
 
 .write-input {
-  width: 250px;
+  width: 300px;
+  box-sizing: border-box;
   margin: 5px 0 10px 0;
 }
 
@@ -178,10 +179,16 @@ button[type="submit"] {
   margin: 0 10px;
 }
 
-.ml-10 {
-  margin-left: 10px;
-}
-
 .login {
   margin-right: 10px;
+}
+
+.signup-btn {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.register-title {
+  text-align: center;
 }

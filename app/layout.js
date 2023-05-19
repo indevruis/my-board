@@ -11,7 +11,8 @@ import {
 import LoginBtn from "./board/component/LoginBtn";
 import LogoutBtn from "./board/component/LogoutBtn";
 import { getServerSession } from "next-auth";
-import authOptions from "@/pages/api/auth/[...nextauth]";
+import SignUp from "./board/component/signupBtn";
+import { authOptions } from "@/pages/api/auth/[...nextauth]";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,7 +35,10 @@ export default async function RootLayout({ children }) {
                 {session.user.name} <LogoutBtn />
               </span>
             ) : (
-              <LoginBtn />
+              <span>
+                <LoginBtn />
+                <SignUp />
+              </span>
             )}
           </div>
         </div>
