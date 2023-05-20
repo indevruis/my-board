@@ -6,7 +6,7 @@ export default async function List({ a }) {
   return (
     <div className="list-item">
       <div className="list-item-left">
-        <Link href={`board/Detail/${data._id}`}>
+        <Link href={`board/detail/${data._id}`}>
           <h4>{data.title}</h4>
           <p className="list-date">{data.date}</p>
         </Link>
