@@ -46,6 +46,13 @@ export default async function Edit(req, res) {
           defaultValue={req.params.id}
           style={{ display: 'none' }}
         />
+        <input
+          type="text"
+          className="write-input"
+          name="author"
+          defaultValue={result.author}
+          style={{ display: 'none' }}
+        />
         <div className="write-btn">
           <button type="submit">Submit</button>
           <button type="reset">Reset</button>
