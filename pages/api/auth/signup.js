@@ -16,8 +16,18 @@ export default async function Signup(req, res) {
           .status(422)
           .json({ result: false, error: "이미 가입된 계정이에요." });
       } else {
-        await result.insertOne(req.body);
-        res.redirect(302, "/board");
+        if (
+          req.body.name === "" ||
+          req.body.email === "" ||
+          req.body.password === ""
+        ) {
+          res
+            .status(422)
+            .json({ result: false, error: "이름, 이메일, 비밀번호를 모두 입력해 주세요." });
+        } else {
+          await result.insertOne(req.body);
+          res.redirect(302, "/board");
+        }
       }
     } catch (error) {
       res
