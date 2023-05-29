@@ -5,7 +5,7 @@ import { faX } from "@fortawesome/free-solid-svg-icons";
 export default function Write() {
   return (
     <div className="write-page">
-      <form action="/api/post/new" method="POST" className="write-form">
+      <form action="/api/board/post/new" method="POST" className="write-form">
         <div className="write-div">
           <div className="write-title">Title</div>
           <input type="text" className="write-input" name="title" />

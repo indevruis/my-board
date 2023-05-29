@@ -11,7 +11,7 @@ export default async function Edit(req, res) {
     .findOne({ _id: new ObjectId(req.params.id) });
   return (
     <div className="write-page">
-      <form action="/api/post/edit" method="POST" className="write-form">
+      <form action="/api/board/post/edit" method="POST" className="write-form">
         <div className="write-div">
           <div className="write-title">Title</div>
           <input

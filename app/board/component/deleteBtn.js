@@ -2,7 +2,7 @@
 
 export default function DeleteBtn({ data }) {
   const handleClickDeleteBtn = () =>
-    fetch(`/api/delete/list?id=${data._id}&author=${data.author}`, {
+    fetch(`/api/board/delete/list?id=${data._id}&author=${data.author}`, {
       method: "Delete",
     });
   return (
