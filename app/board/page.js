@@ -3,11 +3,11 @@ import List from "./List";
 
 export default async function Board() {
   const db = (await connectDB).db("my-board");
-  const result = await db.collection("post").find().toArray();
+  const postList = await db.collection("post").find().toArray();
   return (
     <div className="list-bg">
-      {result.map((a, i) => {
-        return <List a={a} key={i} />;
+      {postList.map((post, i) => {
+        return <List post={post} key={i} />;
       })}
     </div>
   );

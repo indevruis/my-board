@@ -1,8 +1,8 @@
 import Link from "next/link";
 import DeleteBtn from './component/deleteBtn'
 
-export default async function List({ a }) {
-  const data = await JSON.parse(JSON.stringify(await a));
+export default async function List({ post }) {
+  const data = await JSON.parse(JSON.stringify(await post));
   return (
     <div className="list-item">
       <div className="list-item-left">

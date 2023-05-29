@@ -6,7 +6,7 @@ import { ObjectId } from "mongodb";
 
 export default async function Edit(req, res) {
   const db = (await connectDB).db("my-board");
-  const result = await db
+  const post = await db
     .collection("post")
     .findOne({ _id: new ObjectId(req.params.id) });
   return (
@@ -18,7 +18,7 @@ export default async function Edit(req, res) {
             type="text"
             className="write-input"
             name="title"
-            defaultValue={result.title}
+            defaultValue={post.title}
           />
         </div>
         <div className="write-div">
@@ -27,7 +27,7 @@ export default async function Edit(req, res) {
             type="text"
             className="write-input"
             name="content"
-            defaultValue={result.content}
+            defaultValue={post.content}
           />
         </div>
         <div className="write-div">
@@ -36,7 +36,7 @@ export default async function Edit(req, res) {
             type="text"
             className="write-input"
             name="writer"
-            defaultValue={result.writer}
+            defaultValue={post.writer}
           />
         </div>
         <input
@@ -50,7 +50,7 @@ export default async function Edit(req, res) {
           type="text"
           className="write-input"
           name="author"
-          defaultValue={result.author}
+          defaultValue={post.author}
           style={{ display: 'none' }}
         />
         <div className="write-btn">
