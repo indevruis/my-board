@@ -7,7 +7,7 @@ export default async function EditHandler(req, res) {
   const session = await getServerSession(req, res, authOptions);
 
   if (session) {
-    if (session.user.eamil === req.body.author) {
+    if (session.user.email === req.body.author) {
       if (req.method == "POST") {
         const db = (await connectDB).db("my-board");
         const result = await db
