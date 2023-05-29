@@ -1,13 +1,12 @@
 "use client";
 
-export default function DeleteBtn({data}) {
+export default function DeleteBtn({ data }) {
+  const handleClickDeleteBtn = () =>
+    fetch(`/api/delete/list?id=${data._id}&author=${data.author}`, {
+      method: "Delete",
+    });
   return (
-    <span
-      onClick={() => {
-        fetch(`/api/delete/list?id=${data._id}&author=${data.author}`, { method: "Delete" });
-      }}
-      className="list-btn"
-    >
+    <span onClick={handleClickDeleteBtn} className="list-btn">
       ❌
     </span>
   );
